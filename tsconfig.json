@@ -1,0 +1,21 @@
+// Made with tsconfig/bases node-lts schema
+
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Node LTS",
+  "_version": "20.1.0",
+  "compilerOptions": {
+    "lib": [
+      "es2022"
+    ],
+    "outDir": "dist",
+    "module": "Node16",
+    "target": "es2022",
+    "strict": true, // main options
+    "noUncheckedIndexedAccess": true, 
+    "esModuleInterop": true, // main options
+    "skipLibCheck": true, // main options
+    "moduleResolution": "node16"
+  },
+  "include": ["src"] // tsconfig will only be applied here
+}
