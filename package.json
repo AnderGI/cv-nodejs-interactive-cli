@@ -9,7 +9,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc --esModuleInterop --moduleResolution Node16 --outDir dist",
     "execute": "node ./dist/app.js",
-    "app": "npm run build && npm run execute"
+    "compile": "npm run build"
+  },
+  "bin": {
+    "practice":"./dist/app.js"
   },
   "keywords": [],
   "author": "",

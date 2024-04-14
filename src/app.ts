@@ -1,12 +1,4 @@
-#! /usr/bin/env node
+#!/usr/bin/env node
+import { program } from "./program.js";
 
-import { program } from 'commander';
-
-(async () => {
-  program
-    .option('--first')
-    .option('-s, --separator <char>');
-  
-  program.parse();
-
-})();
+program.parse(process.argv);
