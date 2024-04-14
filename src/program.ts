@@ -1,4 +1,5 @@
 import { Command } from "commander";
+import { displayPersonalCareer } from "./display-personal-career.js";
 export const program = new Command();
 
 program
@@ -10,8 +11,5 @@ program
   .version('0.0.1');
 
   program.command('career')
-  .description('This command will display all th einfo related to my professional software development career')
-  //.argument('<string>', 'string to split')
-  //.option('--first', 'display just the first substring')
-  //.option('-s, --separator <char>', 'separator character', ',')
-  .action(() => console.log('Personal career'));
+  .description('This command will display all the info related to my professional software development career')
+  .action(displayPersonalCareer);
