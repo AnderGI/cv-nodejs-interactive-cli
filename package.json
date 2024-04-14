@@ -1,17 +1,15 @@
 {
   "name": "cv-nodejs-interactive-cli",
   "version": "1.0.0",
-  "description": "Personal curriculum vitae built-in an interactive NodeJs command line interface.",
+  "description": "Digital cv displayed by an interactive NodeJS command line interface",
   "main": "./src/app.ts",
   "type": "module",
   "scripts": {
     "start": "node src/app.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc --build --clean",
-    "execute": "node ./dist/app.js"
-  },
-  "bin": {
-    "practice": "./index.js"
+    "build": "tsc --esModuleInterop --moduleResolution Node16 --outDir dist",
+    "execute": "node ./dist/app.js",
+    "app": "npm run build && npm run execute"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +18,7 @@
     "@inquirer/prompts": "5.0.0",
     "@types/node": "20.12.7",
     "chalk": "5.3.0",
-    "typescript": "5.4.5"
+    "commander": "12.0.0"
   },
   "devDependencies": {
     "@types/node": "20.12.7",
